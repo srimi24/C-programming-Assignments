@@ -21,6 +21,8 @@ int main()
     int u = maximum_element_array(arr,n);
     int l = minimum_element_array(arr,n);
 
+    printf("%d %d \n",l,u);
+
     int * get_sorted_array = Distrubution_counting_sort(arr,l,u,n);
     for(int i=0;i<n;i++)
     {
@@ -63,7 +65,7 @@ int* Distrubution_counting_sort(int *a,int l,int u,int n)
         distribution_values_array[j] = 0;
     }
 
-    for(int i=0;i<n-1;i++)
+    for(int i=0;i<n;i++)
     {
         distribution_values_array[a[i]-l] = distribution_values_array[(a[i]-l)]+1;
     }
